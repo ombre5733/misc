@@ -437,7 +437,19 @@ private:
 typedef distance<std::int64_t, SIDIM_STD::nano>  nanometer;
 typedef distance<std::int64_t, SIDIM_STD::micro> micrometer;
 typedef distance<std::int64_t, SIDIM_STD::milli> millimeter;
-typedef distance<std::int64_t>                  meter;
+typedef distance<std::int64_t>                   meter;
+
+template <typename T>
+using nanometer_t = distance<T, SIDIM_STD::nano>;
+
+template <typename T>
+using micrometer_t = distance<T, SIDIM_STD::micro>;
+
+template <typename T>
+using millimeter_t = distance<T, SIDIM_STD::milli>;
+
+template <typename T>
+using meter_t = distance<T>;
 
 // ----=====================================================================----
 //     distance comparisons
